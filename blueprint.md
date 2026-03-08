@@ -7,6 +7,7 @@ A simple, framework-less web project using modern HTML, CSS, and JavaScript, des
 - **Tech Stack:** HTML5, CSS3 (Baseline), Vanilla JavaScript.
 - **Styling:** Modern CSS with `oklch` color spaces, responsive layout, and interactive elements.
 - **Components:** Single-page application with a header and a button.
+- **Integrations:** Google AdSense.
 
 ## Change Log & Current Plan
 
@@ -21,3 +22,10 @@ A simple, framework-less web project using modern HTML, CSS, and JavaScript, des
   2. Create/Update `blueprint.md`.
   3. Commit changes to Git.
   4. Deploy to Firebase.
+
+### [2026-03-08] Google AdSense Integration
+- **Goal:** Integrate Google AdSense into the project.
+- **Steps:**
+  1. Add AdSense script and verification meta tag to `index.html`.
+  2. Create `ads.txt` file in the root directory.
+  3. Update `blueprint.md` to reflect changes.
