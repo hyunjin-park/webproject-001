@@ -1,29 +1,23 @@
-# Blueprint - K-Tabelog (Korean Restaurant Guide)
+# Blueprint - K-Tabelog (Premium Edition)
 
 ## Overview
-A comprehensive restaurant search and review site for Korea, inspired by Tabelog. It features a robust search interface, restaurant rankings, and detailed listing information.
+A high-quality Korean restaurant search and review platform optimized for Google AdSense approval. This version focuses on substantial content, clear navigation, and essential legal compliance.
 
 ## Project Details
-- **Tech Stack:** HTML5, CSS3 (Baseline), Vanilla JavaScript (ES Modules).
-- **Styling:** Tabelog-inspired aesthetic. Warm colors (Orange/Red/Yellow), dense information layout, distinct typography for ratings.
-- **Components:**
-  - **Header:** Global search bar (Area, Keyword).
-  - **Hero:** Featured categories and "Find a restaurant" call to action.
-  - **Ranking Section:** Top-rated restaurants list.
-  - **Restaurant Card:** Thumbnail, Name, Rating (Stars + Number), Area, Category, Price Range.
-  - **Detail View:** Extended info, map placeholder, reviews.
-- **Integrations:** Google AdSense (Preserved).
+- **Tech Stack:** HTML5, CSS3, Vanilla JavaScript (Modular).
+- **Compliance:**
+  - **Mandatory Pages:** About Us, Privacy Policy, Terms of Service.
+  - **Navigation:** Fully functional category filtering and internal linking.
+  - **Content Density:** In-depth restaurant descriptions and food guides.
+- **Styling:** Premium Tabelog-inspired aesthetic. High readability, mobile-first, and professional spacing.
+- **Integrations:** Google AdSense (Optimized placement).
 
 ## Change Log & Current Plan
 
-### Initial Version
-- Basic `index.html`, `style.css`, and `main.js`.
-- AdSense integration.
-
-### [2026-03-08] Pivot to K-Tabelog
-- **Goal:** Transform site into a Korean restaurant search engine.
+### [2026-03-08] AdSense Approval Optimization
+- **Goal:** Transform the prototype into a "High Quality" site that meets all AdSense criteria.
 - **Steps:**
-  1.  **Structure:** Rewrite `index.html` with a search-focused header and main layout.
-  2.  **Data:** Create mock data for Korean restaurants in `main.js`.
-  3.  **Logic:** Implement rendering logic for restaurant lists and detail views.
-  4.  **Style:** Apply Tabelog-like styles (warm palette, grid layouts).
+  1.  **Content Expansion:** Add detailed "Food Guides" to the home page to increase text-to-code ratio.
+  2.  **Mandatory Pages:** Implement a dynamic "Page System" in `main.js` to show Privacy Policy and About Us content.
+  3.  **Refined Navigation:** Make category buttons and footer links functional.
+  4.  **UX Polish:** Enhance `style.css` with better typography and "premium" visual effects (soft shadows, oklch colors).

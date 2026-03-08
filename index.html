@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>K-Tabelog: 한국 맛집 랭킹 & 검색</title>
+  <title>K-Tabelog: 한국 최고의 맛집 가이드 & 검색</title>
   
   <!-- AdSense Integration -->
   <meta name="google-adsense-account" content="ca-pub-2373698130447430">
@@ -21,7 +21,7 @@
   <header class="site-header">
     <div class="header-inner">
       <div class="logo">
-        <a href="/" onclick="handleNav(event, 'home')">
+        <a href="/" data-page="home">
           <span class="logo-icon">🍽️</span>
           <span class="logo-text">K-Tabelog</span>
         </a>
@@ -38,15 +38,15 @@
         <button id="search-btn">검색</button>
       </div>
       <nav class="user-nav">
-        <a href="#">로그인</a>
-        <a href="#" class="btn-primary">회원가입</a>
+        <a href="#" data-page="about">소개</a>
+        <a href="#" class="btn-primary">로그인</a>
       </nav>
     </div>
   </header>
 
   <nav class="category-nav">
     <div class="nav-inner">
-      <a href="#" class="active">전체</a>
+      <a href="#" class="active" data-cat="all">전체</a>
       <a href="#" data-cat="Korean">한식</a>
       <a href="#" data-cat="Japanese">일식</a>
       <a href="#" data-cat="Chinese">중식</a>
@@ -57,17 +57,18 @@
   </nav>
 
   <main id="app">
-    <!-- Content will be injected by main.js -->
-    
-    <!-- Hero / Intro Section -->
-    <section id="hero-section" class="hero">
+    <!-- App content will be dynamically injected here for SEO-friendly SPA -->
+  </main>
+
+  <!-- Templates for AdSense Approval (Legal Pages) -->
+  <template id="tpl-home">
+    <section class="hero">
       <div class="hero-content">
-        <h1>실패 없는 미식 라이프</h1>
-        <p>전국 10만 개 이상의 맛집 데이터와 리얼 리뷰를 확인하세요.</p>
+        <h1>실패 없는 미식 라이프, K-Tabelog</h1>
+        <p>엄격한 리뷰와 공정한 랭킹으로 전국의 진짜 맛집을 제안합니다.</p>
       </div>
     </section>
 
-    <!-- AdSense Placeholder -->
     <div class="ad-container">
        <ins class="adsbygoogle"
            style="display:block"
@@ -75,45 +76,73 @@
            data-ad-slot="1234567890"
            data-ad-format="auto"
            data-full-width-responsive="true"></ins>
-       <script>
-            (adsbygoogle = window.adsbygoogle || []).push({});
-       </script>
     </div>
 
-    <!-- Top Ranking Section -->
     <section class="section-container">
       <div class="section-header">
         <h2>🏆 실시간 전국 맛집 랭킹</h2>
-        <a href="#" class="view-all">전체보기 &gt;</a>
       </div>
-      <div id="ranking-list" class="restaurant-list">
-        <!-- Rendered via JS -->
-      </div>
+      <div id="ranking-list" class="restaurant-list"></div>
     </section>
 
-    <!-- New Arrivals -->
-    <section class="section-container">
+    <!-- High-Quality Content Section (Google AdSense likes text-rich content) -->
+    <section class="section-container content-rich">
       <div class="section-header">
-        <h2>🆕 새로 오픈한 핫플레이스</h2>
-        <a href="#" class="view-all">전체보기 &gt;</a>
+        <h2>📝 오늘의 푸드 가이드</h2>
       </div>
-      <div id="new-list" class="restaurant-grid">
-        <!-- Rendered via JS -->
+      <div class="guide-grid">
+        <article class="guide-card">
+          <h3>한국인이 사랑하는 5가지 김치찌개 스타일</h3>
+          <p>김치찌개는 단순히 김치를 끓인 음식이 아닙니다. 돼지고기 앞다리살을 듬뿍 넣은 묵직한 스타일부터, 멸치 육수로 깔끔하게 끓여낸 스타일까지 한국의 지역별 개성을 소개합니다.</p>
+        </article>
+        <article class="guide-card">
+          <h3>제주도 흑돼지, 진짜를 구별하는 법</h3>
+          <p>제주도 여행의 필수 코스인 흑돼지 구이. 껍질의 검은 털 흔적부터 육질의 탄력까지, 관광객이 아닌 현지인이 찾는 진짜 흑돼지 맛집의 기준을 알려드립니다.</p>
+        </article>
       </div>
     </section>
+  </template>
 
-  </main>
+  <template id="tpl-about">
+    <div class="page-content">
+      <h1>서비스 소개</h1>
+      <p>K-Tabelog는 사용자의 신뢰를 최우선으로 하는 미식 가이드 플랫폼입니다. 우리는 단순히 식당을 나열하는 것이 아니라, 실제 방문객의 경험과 데이터를 바탕으로 투명한 미식 문화를 만들어가고 있습니다.</p>
+      <h3>우리의 미션</h3>
+      <ul>
+        <li>공정한 리뷰 시스템 유지</li>
+        <li>지역 소상공인과 상생하는 미식 생태계 구축</li>
+        <li>누구나 쉽고 빠르게 원하는 정보를 찾을 수 있는 UX 제공</li>
+      </ul>
+    </div>
+  </template>
+
+  <template id="tpl-privacy">
+    <div class="page-content">
+      <h1>개인정보처리방침</h1>
+      <p>K-Tabelog는 이용자의 소중한 정보를 안전하게 보호합니다. 본 방침은 당사가 수집하는 정보의 종류와 사용 목적, 그리고 이용자의 권리에 대해 상세히 설명합니다.</p>
+      <p>(본 내용은 예시이며, 실제 서비스 운영 시 법적 검토가 필요합니다.)</p>
+    </div>
+  </template>
+
+  <template id="tpl-terms">
+    <div class="page-content">
+      <h1>이용약관</h1>
+      <p>K-Tabelog의 서비스를 이용하시기 전, 아래의 이용약관을 반드시 확인해 주시기 바랍니다. 본 서비스 이용 시 귀하는 본 약관에 동의하는 것으로 간주됩니다.</p>
+    </div>
+  </template>
 
   <footer class="site-footer">
     <div class="footer-inner">
       <div class="footer-links">
-        <a href="#">서비스 소개</a>
-        <a href="#">이용약관</a>
-        <a href="#">개인정보처리방침</a>
-        <a href="#">고객센터</a>
+        <a href="#" data-page="about">서비스 소개</a>
+        <a href="#" data-page="terms">이용약관</a>
+        <a href="#" data-page="privacy">개인정보처리방침</a>
+        <a href="#" data-page="about">고객센터</a>
       </div>
       <p class="copyright">&copy; 2026 K-Tabelog. All rights reserved.</p>
-      <p class="disclaimer">본 사이트는 포트폴리오용 예시 사이트입니다.</p>
+      <div class="footer-bottom">
+        <p>본 사이트는 Google AdSense 품질 가이드를 준수하며, 유용한 정보를 제공하기 위해 최선을 다하고 있습니다.</p>
+      </div>
     </div>
   </footer>
 
