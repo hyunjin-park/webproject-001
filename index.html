@@ -1,42 +1,122 @@
 <!doctype html>
-<html lang="en">
+<html lang="ko">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>K-Tabelog: 한국 맛집 랭킹 & 검색</title>
+  
+  <!-- AdSense Integration -->
   <meta name="google-adsense-account" content="ca-pub-2373698130447430">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2373698130447430"
      crossorigin="anonymous"></script>
-  <title>AdSense Ready Web Site</title>
+
   <link href='/style.css' rel='stylesheet'>
+  <!-- Google Fonts for Korean (Noto Sans KR) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
-    <h1>Welcome to My Site</h1>
-    <nav>
-      <ul>
-        <li><a href="/">Home</a></li>
-      </ul>
-    </nav>
+  
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="logo">
+        <a href="/" onclick="handleNav(event, 'home')">
+          <span class="logo-icon">🍽️</span>
+          <span class="logo-text">K-Tabelog</span>
+        </a>
+      </div>
+      <div class="search-bar">
+        <select id="area-select">
+          <option value="">전국</option>
+          <option value="Seoul">서울</option>
+          <option value="Busan">부산</option>
+          <option value="Jeju">제주</option>
+          <option value="Incheon">인천</option>
+        </select>
+        <input type="text" id="search-input" placeholder="맛집, 음식, 지역 검색...">
+        <button id="search-btn">검색</button>
+      </div>
+      <nav class="user-nav">
+        <a href="#">로그인</a>
+        <a href="#" class="btn-primary">회원가입</a>
+      </nav>
+    </div>
   </header>
-  <main>
-    <section id="hero">
-      <h2>Sharing Knowledge and Content</h2>
-      <p>This is a modern web site designed to be fast, responsive, and ready for Google AdSense integration. We believe in providing value to our visitors.</p>
+
+  <nav class="category-nav">
+    <div class="nav-inner">
+      <a href="#" class="active">전체</a>
+      <a href="#" data-cat="Korean">한식</a>
+      <a href="#" data-cat="Japanese">일식</a>
+      <a href="#" data-cat="Chinese">중식</a>
+      <a href="#" data-cat="Western">양식</a>
+      <a href="#" data-cat="Cafe">카페</a>
+      <a href="#" data-cat="Bar">주점</a>
+    </div>
+  </nav>
+
+  <main id="app">
+    <!-- Content will be injected by main.js -->
+    
+    <!-- Hero / Intro Section -->
+    <section id="hero-section" class="hero">
+      <div class="hero-content">
+        <h1>실패 없는 미식 라이프</h1>
+        <p>전국 10만 개 이상의 맛집 데이터와 리얼 리뷰를 확인하세요.</p>
+      </div>
     </section>
-    <section id="content">
-      <article>
-        <h3>About Google AdSense</h3>
-        <p>Google AdSense is a program that allows website publishers to earn money by displaying targeted advertisements on their sites. By placing a small piece of code on your pages, Google serves ads relevant to your content and audience.</p>
-      </article>
-      <article>
-        <h3>Getting Started with Ads</h3>
-        <p>Once your account is approved and your site is connected, ads will start appearing automatically if you have "Auto Ads" enabled. Alternatively, you can create specific ad units to place exactly where you want them.</p>
-      </article>
+
+    <!-- AdSense Placeholder -->
+    <div class="ad-container">
+       <ins class="adsbygoogle"
+           style="display:block"
+           data-ad-client="ca-pub-2373698130447430"
+           data-ad-slot="1234567890"
+           data-ad-format="auto"
+           data-full-width-responsive="true"></ins>
+       <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+       </script>
+    </div>
+
+    <!-- Top Ranking Section -->
+    <section class="section-container">
+      <div class="section-header">
+        <h2>🏆 실시간 전국 맛집 랭킹</h2>
+        <a href="#" class="view-all">전체보기 &gt;</a>
+      </div>
+      <div id="ranking-list" class="restaurant-list">
+        <!-- Rendered via JS -->
+      </div>
     </section>
+
+    <!-- New Arrivals -->
+    <section class="section-container">
+      <div class="section-header">
+        <h2>🆕 새로 오픈한 핫플레이스</h2>
+        <a href="#" class="view-all">전체보기 &gt;</a>
+      </div>
+      <div id="new-list" class="restaurant-grid">
+        <!-- Rendered via JS -->
+      </div>
+    </section>
+
   </main>
-  <footer>
-    <p>&copy; 2026 AdSense Ready Site. All rights reserved.</p>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-links">
+        <a href="#">서비스 소개</a>
+        <a href="#">이용약관</a>
+        <a href="#">개인정보처리방침</a>
+        <a href="#">고객센터</a>
+      </div>
+      <p class="copyright">&copy; 2026 K-Tabelog. All rights reserved.</p>
+      <p class="disclaimer">본 사이트는 포트폴리오용 예시 사이트입니다.</p>
+    </div>
   </footer>
-  <script defer type="text/javascript" src="/main.js"></script>
+
+  <script type="module" src="/main.js"></script>
 </body>
 </html>

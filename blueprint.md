@@ -1,31 +1,29 @@
-# Blueprint - Web Project
+# Blueprint - K-Tabelog (Korean Restaurant Guide)
 
 ## Overview
-A simple, framework-less web project using modern HTML, CSS, and JavaScript, designed to be visually appealing and responsive.
+A comprehensive restaurant search and review site for Korea, inspired by Tabelog. It features a robust search interface, restaurant rankings, and detailed listing information.
 
 ## Project Details
-- **Tech Stack:** HTML5, CSS3 (Baseline), Vanilla JavaScript.
-- **Styling:** Modern CSS with `oklch` color spaces, responsive layout, and interactive elements.
-- **Components:** Single-page application with a header and a button.
-- **Integrations:** Google AdSense.
+- **Tech Stack:** HTML5, CSS3 (Baseline), Vanilla JavaScript (ES Modules).
+- **Styling:** Tabelog-inspired aesthetic. Warm colors (Orange/Red/Yellow), dense information layout, distinct typography for ratings.
+- **Components:**
+  - **Header:** Global search bar (Area, Keyword).
+  - **Hero:** Featured categories and "Find a restaurant" call to action.
+  - **Ranking Section:** Top-rated restaurants list.
+  - **Restaurant Card:** Thumbnail, Name, Rating (Stars + Number), Area, Category, Price Range.
+  - **Detail View:** Extended info, map placeholder, reviews.
+- **Integrations:** Google AdSense (Preserved).
 
 ## Change Log & Current Plan
 
 ### Initial Version
 - Basic `index.html`, `style.css`, and `main.js`.
-- Minimalist design.
+- AdSense integration.
 
-### [2026-03-05] Background Color Update
-- **Goal:** Update the background color to a modern grey and enhance overall visual design.
+### [2026-03-08] Pivot to K-Tabelog
+- **Goal:** Transform site into a Korean restaurant search engine.
 - **Steps:**
-  1. Update `style.css` with `oklch(0.96 0.01 250)` background and modern typography/button styles.
-  2. Create/Update `blueprint.md`.
-  3. Commit changes to Git.
-  4. Deploy to Firebase.
-
-### [2026-03-08] Google AdSense Integration
-- **Goal:** Integrate Google AdSense into the project.
-- **Steps:**
-  1. Add AdSense script and verification meta tag to `index.html`.
-  2. Create `ads.txt` file in the root directory.
-  3. Update `blueprint.md` to reflect changes.
+  1.  **Structure:** Rewrite `index.html` with a search-focused header and main layout.
+  2.  **Data:** Create mock data for Korean restaurants in `main.js`.
+  3.  **Logic:** Implement rendering logic for restaurant lists and detail views.
+  4.  **Style:** Apply Tabelog-like styles (warm palette, grid layouts).
