@@ -14,10 +14,11 @@ A high-quality Korean restaurant search and review platform optimized for Google
 
 ## Change Log & Current Plan
 
-### [2026-03-09] Google Analytics Integration
-- **Goal:** Add Google Analytics (gtag.js) to all HTML pages for traffic monitoring.
+### [2026-03-09] Analytics & Monitoring Integration
+- **Goal:** Add Google Analytics (gtag.js) and Microsoft Clarity for traffic and behavior monitoring.
 - **Steps:**
-  1.  **Tag Insertion:** Add the `gtag.js` script to the `<head>` section of `index.html`.
+  1.  **Google Analytics:** Add the `gtag.js` script to the `<head>` of `index.html`. (Completed)
+  2.  **MS Clarity:** Add the Microsoft Clarity tracking script to the `<head>` of `index.html`.
 
 ### [2026-03-08] AdSense Approval Optimization
 - **Goal:** Transform the prototype into a "High Quality" site that meets all AdSense criteria.
